@@ -14,6 +14,10 @@ export class RecipeService {
     return this.recipes.slice(); // exact copy of the array
   }
 
+  getRecipe(id: number) {
+    return this.recipes[id];
+  }
+
   constructor(private shoppingListService: ShoppingListService) {}
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
